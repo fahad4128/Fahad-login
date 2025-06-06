@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fefefe;
+  font-family: 'Courier New', monospace;
+}
+
+.machine {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  position: relative;
+  background: #fff;
+  border: 3px dashed #000;
+  border-radius: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #000;
+  font-size: 16px;
+}
+
+.checkbox-area {
+  margin: 10px 0;
+}
+
+button {
+  padding: 12px;
+  font-size: 18px;
+  width: 100%;
+  background: black;
+  color: white;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.hand {
+  position: absolute;
+  left: 10px;
+  animation: fingerMove 1s infinite;
+}
+
+@keyframes fingerMove {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+  100% { transform: translateY(0); }
+}
+
+/* Gears */
+.gearbox {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gear {
+  width: 40px;
+  height: 40px;
+  border: 6px dashed #000;
+  border-radius: 50%;
+  animation: spin 3s linear infinite paused;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Rope */
+.rope {
+  width: 3px;
+  height: 80px;
+  background: black;
+  position: absolute;
+  top: 180px;
+  left: 190px;
+}
+
+/* Weight */
+.weight {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 260px;
+  left: 175px;
+  transition: top 0.5s ease;
+}
+
+/* Lever */
+.lever {
+  width: 100px;
+  height: 8px;
+  background: black;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-15deg);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+/* Hand mechanism */
+.hand-mech {
+  font-size: 30px;
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  transition: transform 0.4s ease;
+}
