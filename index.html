@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rube Goldberg Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="machine">
+    <svg class="gear gear1" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" stroke="black" stroke-width="10" fill="none" />
+    </svg>
+    <svg class="gear gear2" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" stroke="black" stroke-width="10" fill="none" />
+    </svg>
+
+    <div class="rope"></div>
+    <div class="weight"></div>
+    <div class="lever"></div>
+    <div class="robot-hand">🤖</div>
+
+    <form id="loginForm">
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Enter username" />
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Enter email" />
+
+      <div class="checkbox-area">
+        <input type="checkbox" id="rememberMe" />
+        <label for="rememberMe">Remember me</label>
+      </div>
+
+      <button type="submit" id="submitBtn">
+        <span class="hand">👆</span> Submit
+      </button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

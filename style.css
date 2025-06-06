@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  font-family: 'Courier New', monospace;
+}
+
+.machine {
+  width: 90%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fffbe6;
+  border: 5px dotted #000;
+  border-radius: 20px;
+  position: relative;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 2px solid #000;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.hand {
+  margin-right: 8px;
+}
+
+.gear {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+}
+
+.gear1 {
+  left: 10px;
+  animation: rotate 3s linear infinite paused;
+}
+
+.gear2 {
+  right: 10px;
+  animation: rotateReverse 3s linear infinite paused;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateReverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.rope {
+  width: 3px;
+  height: 100px;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
+}
+
+.weight {
+  width: 30px;
+  height: 30px;
+  background: #222;
+  border-radius: 50%;
+  position: absolute;
+  top: 160px;
+  left: calc(50% - 15px);
+  transition: top 0.5s ease;
+}
+
+.lever {
+  width: 100px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  transform: rotate(-15deg);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.robot-hand {
+  font-size: 28px;
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  transition: transform 0.4s ease;
+}
