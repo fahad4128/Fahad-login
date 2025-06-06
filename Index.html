@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mechanical Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <form id="loginForm">
+      <div class="gear-box">
+        <div class="gear" id="gear1"></div>
+        <div class="gear" id="gear2"></div>
+      </div>
+      <label>Username</label>
+      <input type="text" placeholder="Enter username" id="username" />
+      
+      <label>Email</label>
+      <input type="email" placeholder="Enter email" id="email" />
+
+      <div class="checkbox-area">
+        <input type="checkbox" id="rememberMe" />
+        <label for="rememberMe">Remember me</label>
+      </div>
+
+      <button type="submit" id="submitBtn">
+        <span class="hand">👆</span> Submit
+      </button>
+    </form>
+
+    <div class="lever"></div>
+    <div class="chain"></div>
+    <div class="weight"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
